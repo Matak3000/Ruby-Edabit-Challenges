@@ -1,0 +1,14 @@
+#Given an integer array, transform it into a mirror.
+#mirror([0, 2, 4, 6]) ➞ [0, 2, 4, 6, 4, 2, 0]
+#replace print with return for functionality
+
+def mirror(arr)
+	a = arr.count - 1
+    until a == 0
+        a -= 1
+        arr.push(arr[a])
+    end
+    print arr
+end
+
+mirror([0, 2, 4, 6])

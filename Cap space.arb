@@ -1,0 +1,17 @@
+#Create a function which adds spaces before every capital in a word. Uncapitalize the whole string afterwards.
+#cap_space("helloWorld") ➞ "hello world"
+
+def cap_space(txt)
+	txt = txt.chars
+    final = []
+    i = 0
+    until i == txt.count
+        final.push(" ") if txt[i] == txt[i].upcase
+        final.push(txt[i].downcase)
+        i += 1
+    end
+    final = final.join
+    print final
+end
+
+cap_space("helloWorld")
