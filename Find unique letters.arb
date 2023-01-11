@@ -1,0 +1,15 @@
+#find_unique_letters("monopoly") ➞ ["m", "n", "p", "l", "y"]
+#replace print with return for functionality
+
+def find_unique_letters(word)
+	word = word.chars
+	test = []
+	del = []
+	for x in word
+		test.include?(x) == true ? del.push(x) : test.push(x)
+	end
+	test.delete_if { |x| del.include?(x) == true}
+	print test
+end
+
+find_unique_letters("monopoly")

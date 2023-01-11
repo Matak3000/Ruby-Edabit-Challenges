@@ -1,0 +1,27 @@
+#Write a function that returns the greatest common divisor (GCD) of two integers.
+#WITHOUT n1.gcd(n2)
+#gcd(32, 8) ➞ 8
+#replace print with return for functionality
+
+def gcd(n1, n2)
+	n1count = n1 - 1
+	n1arr = [n1]
+	n2count = n2 - 1
+	n2arr = [n2]
+	until n1count == 0
+		n1arr.push(n1count) if n1%n1count == 0
+		n1count -= 1
+	end
+	until n2count == 0
+		n2arr.push(n2count) if n2%n2count == 0
+		n2count -= 1
+	end
+	for item in n1arr
+		if n2arr.include?(item) == true
+			print item
+            return #delete and change print to return on previous line, a break is required to stop other factors being listed
+		end
+	end
+end
+
+gcd(32, 8)

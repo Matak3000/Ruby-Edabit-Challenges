@@ -1,0 +1,15 @@
+#Create a function that takes two numbers as arguments (num, length) and returns an array of multiples of num until the array length reaches length.
+#array_of_multiples(7, 5) ➞ [7, 14, 21, 28, 35]
+#replace print with return for functionality
+
+def array_of_multiples (num, length)
+	arr = []
+    i = 0
+    until i == length
+        i += 1
+        arr.push(num * i)
+    end
+    print arr
+end
+
+array_of_multiples(7, 5)

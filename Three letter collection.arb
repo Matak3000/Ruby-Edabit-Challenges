@@ -1,0 +1,27 @@
+#Given a string, return a sorted array of words formed from the first three letters, then the next three letters, shifting by only one.
+#three_letter_collection("edabit") ➞ ["abi", "bit", "dab", "eda"]
+# 1st word: "eda"
+# 2nd word: "dab"
+# 3rd word: "abi"
+# 4th word: "bit"
+# Remember to sort the array!
+#replace print with return for functionality
+
+def three_letter_collection(s)
+	s = s.chars
+    arr = []
+    if s.count < 3 
+        print arr
+    elsif s.count == 3
+        print s.join
+    else
+        a = 2
+        until a == s.count
+            arr.push([s[a-2],s[a-1],s[a]].join)
+            a += 1
+        end
+        print arr.sort
+    end
+end
+
+three_letter_collection("edabit")
