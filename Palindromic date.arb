@@ -1,0 +1,13 @@
+#Given a date in dd/mm/yyyy format, return true if the date is palindromic in both date formats, otherwise return false.
+#palindromic_date("02/02/2020") ➞ true
+
+def palindromic_date(date)
+	date = date.chars ; date.delete_at(5) ; date.delete_at(2)
+    if date[0..1] == date[2..3] && date[0..3] == date[4..7].reverse
+        print true
+    else
+        print false
+    end
+end
+
+palindromic_date("02/02/2020")
